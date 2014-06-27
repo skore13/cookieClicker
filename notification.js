@@ -14,7 +14,7 @@
         var cached_function = Game.goldenCookie.spawn;
         Game.goldenCookie.spawn=function() {
             cached_function.apply(this);
-            new window.Notification("Golden cookie spawned");
+            new window.Notification("Golden cookie spawned",{icon:"http://orteil.dashnet.org/cookieclicker/img/goldCookie.png"});
         }
     };
     script.src = 'https://rawgit.com/auchenberg/WebNotification.js/master/WebNotification.js';
