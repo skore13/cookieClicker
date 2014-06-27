@@ -1,4 +1,3 @@
-// LIBRARY
 (function(d, script) {
     script = d.createElement('script');
     script.type = 'text/javascript';
@@ -22,6 +21,4 @@
     d.getElementsByTagName('head')[0].appendChild(script);
 }(document));
 
-// MY CODE
-
-
+Game.Win('Third-party');
