@@ -3,6 +3,9 @@ cookieClicker
 
 Cookie Clicker addon which shows notification every time golden cookie spawns
 
+## Usage:
+Paste folowing script to browser console (CTRL+SHIFT+C or F12 in chrome) and press ENTER
+
     (function(d, script) {
         script = d.createElement('script');
         script.type = 'text/javascript';
@@ -14,3 +17,4 @@ Cookie Clicker addon which shows notification every time golden cookie spawns
         d.getElementsByTagName('head')[0].appendChild(script);
     }(document));
 
+Click on news and confirm
