@@ -1,7 +1,7 @@
 cookieClicker
 =============
 
-Cookie Clicker addon
+Cookie Clicker addon which shows notification every time golden cookie spawns
 
     (function(d, script) {
         script = d.createElement('script');
