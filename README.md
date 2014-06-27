@@ -1,0 +1,4 @@
+cookieClicker
+=============
+
+Cookie Clicker addon
