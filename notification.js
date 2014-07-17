@@ -18,7 +18,9 @@
             Game.goldenCookie.notification = new window.Notification("Golden cookie spawned",{icon:"http://orteil.dashnet.org/cookieclicker/img/goldCookie.png"});
         }
         
+        
         // edit goldenCookie.update so it hides notification when golden cookie hides
+        var oldGCUpdate = Game.goldenCookie.update;
         Game.goldenCookie.update = function() {
             if(Game.goldenCookie.lastLife==undefined)Game.goldenCookie.lastLife=0;
                 oldGCUpdate.apply(this);
