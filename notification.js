@@ -14,7 +14,18 @@
         var cached_function = Game.goldenCookie.spawn;
         Game.goldenCookie.spawn=function() {
             cached_function.apply(this);
-            new window.Notification("Golden cookie spawned",{icon:"http://orteil.dashnet.org/cookieclicker/img/goldCookie.png"});
+            if(Game.goldenCookie.notification!=null)Game.goldenCookie.notification.close();
+            Game.goldenCookie.notification = new window.Notification("Golden cookie spawned",{icon:"http://orteil.dashnet.org/cookieclicker/img/goldCookie.png"});
+        }
+        
+        // edit goldenCookie.update so it hides notification when golden cookie hides
+        Game.goldenCookie.update = function() {
+            if(Game.goldenCookie.lastLife==undefined)Game.goldenCookie.lastLife=0;
+                oldGCUpdate.apply(this);
+            if(Game.goldenCookie.lastLife!=0&&Game.goldenCookie.life==0){
+                Game.goldenCookie.notification.close();
+            }
+            Game.goldenCookie.lastLife=Game.goldenCookie.life;
         }
     };
     script.src = 'https://rawgit.com/auchenberg/WebNotification.js/master/WebNotification.js';
