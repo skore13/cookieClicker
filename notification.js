@@ -15,7 +15,7 @@
         Game.goldenCookie.spawn=function() {
             cached_function.apply(this);
             if(Game.goldenCookie.notification!=null)Game.goldenCookie.notification.close();
-            Game.goldenCookie.notification = new window.Notification("Golden cookie spawned",{icon:"http://orteil.dashnet.org/cookieclicker/img/goldCookie.png"});
+            Game.goldenCookie.notification = new window.Notification(Game.goldenCookie.wrath?"Wrath cookie spawned":"Golden cookie spawned",{icon:"http://orteil.dashnet.org/cookieclicker/img/goldCookie.png"});
         }
         
         
@@ -35,3 +35,4 @@
 }(document));
 
 Game.Win('Third-party');
+
